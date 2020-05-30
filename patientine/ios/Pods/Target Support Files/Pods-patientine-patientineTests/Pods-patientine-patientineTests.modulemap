@@ -1,0 +1,6 @@
+module Pods_patientine_patientineTests {
+  umbrella header "Pods-patientine-patientineTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
