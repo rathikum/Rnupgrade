@@ -1,6 +1,10 @@
 // import {createAppContainer} from 'react-navigation';
 // import {createStackNavigator} from 'react-navigation-stack';
 
+
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
 import LoginScreen from './src/components/Login/Login';
 // import DashBoardScreen from './src/components/DashBoard';
 // import ProfileScreen from './src/components/Profile';
@@ -46,6 +50,20 @@ import HomePage from './src/components/HomePage';
 // TermsCondition: {screen: TermsCondition},
 // });
 
-export default LoginScreen;
+
+const AppNavigator = createStackNavigator({
+    login: {
+        screen: LoginScreen,
+        navigationOptions: {
+            header: null,
+        }
+    }
+},
+    {
+        initialRouteName: "login"
+    }
+);
+export default createAppContainer(AppNavigator);
+
 
 // export default createAppContainer(App);
