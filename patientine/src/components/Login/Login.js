@@ -74,7 +74,7 @@ export default class Login extends Component {
                   },
                   () => {
                     patId.getPatientId(this.state.patientId);
-                    navigate('Home');
+                    navigate('home');
                   },
                 );
               }

@@ -37,9 +37,9 @@ export default class HomePage extends Component {
         <View style={{flexDirection: 'row'}}>
           <View>
             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-              <FontAwesome style={styles.iconPowerOff}>
+              {/* <FontAwesome style={styles.iconPowerOff}>
                 {Icons.powerOff}
-              </FontAwesome>
+              </FontAwesome> */}
             </TouchableOpacity>
           </View>
         </View>
