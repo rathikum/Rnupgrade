@@ -26,7 +26,8 @@ import StyledConstants from '../constants/styleConstants'
 var patId = new PatientId(),
   noOfDoc = 0
 
-import FontAwesome, { Icons, signOutAlt } from 'react-native-fontawesome'
+// import FontAwesome, { SolidIcons } from 'react-native-fontawesome'
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { scaledHeight } from '../Utils/Resolution'
 
 export default class OfflineMessages extends Component {
@@ -36,7 +37,7 @@ export default class OfflineMessages extends Component {
       headerTintColor: '#fff',
       title: 'Messages',
       headerStyle: {
-        height: scaledHeight(50),
+        height: scaledHeight(100),
         backgroundColor: StyledConstants.colors.primaryColor
       },
       headerTitleStyle: {
@@ -57,17 +58,16 @@ export default class OfflineMessages extends Component {
                 marginRight: 10
               }}
             >
-              {/* <FontAwesome
-                style={{
-                  fontSize: 26,
-                  color: 'white',
-                  marginRight: 14,
-                  marginLeft: 11,
-                  marginTop: 5
-                }}
-              >
-                {Icons.arrowLeft}
-              </FontAwesome> */}
+               <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={{fontSize: scaledHeight(20),
+                      marginTop: scaledHeight(3),
+                      color: StyledConstants.colors.WHITE_COLOR,
+                      marginLeft: scaledHeight(20),
+                      marginRight: scaledHeight(20),}}
+                  />
             </View>
           </TouchableOpacity>
         </View>
@@ -229,14 +229,14 @@ export default class OfflineMessages extends Component {
                     }
                   }}
                 >
-                  {/* <FontAwesome
+                  <FontAwesome
                     style={{
                       fontSize: scaledHeight(40),
                       color: StyledConstants.colors.primaryColor
                     }}
-                  >
-                    {Icons.angleLeft}
-                  </FontAwesome> */}
+                    name="chevron-left"
+                  />
+                  
                 </TouchableOpacity>
               </View>
             </View>
@@ -273,14 +273,13 @@ export default class OfflineMessages extends Component {
                     }
                   }}
                 >
-                  {/* <FontAwesome
+                  <FontAwesome
                     style={{
                       fontSize: scaledHeight(40),
                       color: StyledConstants.colors.primaryColor
                     }}
-                  >
-                    {Icons.angleRight}
-                  </FontAwesome> */}
+                    name="chevron-right"
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -369,14 +368,13 @@ export default class OfflineMessages extends Component {
                     }
                   }}
                 >
-                  {/* <FontAwesome
+                   <FontAwesome
                     style={{
                       fontSize: scaledHeight(40),
                       color: StyledConstants.colors.primaryColor
                     }}
-                  >
-                    {Icons.angleLeft}
-                  </FontAwesome> */}
+                    name="chevron-left"
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -421,14 +419,13 @@ export default class OfflineMessages extends Component {
                     }
                   }}
                 >
-                  {/* <FontAwesome
+                  <FontAwesome
                     style={{
                       fontSize: scaledHeight(40),
                       color: StyledConstants.colors.primaryColor
                     }}
-                  >
-                    {Icons.angleRight}
-                  </FontAwesome> */}
+                    name="chevron-right"
+                  />
                 </TouchableOpacity>
               </View>
             </View>

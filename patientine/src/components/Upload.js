@@ -11,7 +11,7 @@ import {
   ToastAndroid,
   AlertIOS
 } from "react-native";
-import FontAwesome, { Icons } from "react-native-fontawesome";
+// import FontAwesome, { Icons } from "react-native-fontawesome";
 import {
   Avatar,
   List,
@@ -30,6 +30,7 @@ import RNFS from 'react-native-fs';
 import * as mime from 'react-native-mime-types';
 import { scaledHeight } from "../Utils/Resolution";
 import StyledConstants from "../constants/styleConstants";
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
 var DetailsOfBilling = [];
@@ -47,7 +48,7 @@ export default class Upload extends Component {
       headerTintColor: StyledConstants.colors.WHITE_COLOR,
       title: "Documents",
       headerStyle: {
-        height: scaledHeight(50),
+        height: scaledHeight(100),
         backgroundColor:StyledConstants.colors.primaryColor
       },
       headerTitleStyle: {
@@ -57,16 +58,16 @@ export default class Upload extends Component {
       },
       headerLeft: (
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          {/* <FontAwesome
-            style={{
-              fontSize: scaledHeight(20),
-              color: StyledConstants.colors.WHITE_COLOR,
-              marginRight:scaledHeight(15),
-              marginLeft: scaledHeight(15),
-            }}
-          >
-            {Icons.arrowLeft}
-          </FontAwesome> */}
+          <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={{fontSize: scaledHeight(20),
+                      marginTop: scaledHeight(3),
+                      color: StyledConstants.colors.WHITE_COLOR,
+                      marginLeft: scaledHeight(20),
+                      marginRight: scaledHeight(20),}}
+                  />
         </TouchableOpacity>
       )
     };
@@ -468,9 +469,20 @@ uploadDocument = () => {
                     marginRight:scaledHeight(10),
                     marginLeft: scaledHeight(10),
                   }}
-                >
+
+                />
                   {Icons.filePdfO}
                 </FontAwesome> */}
+                <FontAwesome
+                    size={60}
+                    name="file-pdf-o"
+                    color={StyledConstants.colors.primaryColor}
+                    style={{
+                      marginRight:scaledHeight(10),
+                      marginLeft: scaledHeight(10),
+                    }}
+                  />
+                
 
                 <Text style={{ width:scaledHeight(80),marginLeft: scaledHeight(10),marginTop:scaledHeight(10),color:StyledConstants.colors.FONT_COLOR,fontSize:scaledHeight(12)}}>
                 {i.documentName}
@@ -508,16 +520,15 @@ uploadDocument = () => {
                 <View style={{height:scaledHeight(200),width:"100%", flexDirection:'row'}}>
 
               <View style={{ flexDirection:'column'}}>      
-                {/* <FontAwesome
-                  style={{
-                    fontSize: scaledHeight(60),
-                    color: StyledConstants.colors.primaryColor,
-                    marginRight:scaledHeight(10),
-                    marginLeft: scaledHeight(10),
-                  }}
-                >
-                  {Icons.filePdfO}
-                </FontAwesome> */}
+              <FontAwesome
+                    size={60}
+                    name="file-pdf-o"
+                    color={StyledConstants.colors.primaryColor}
+                    style={{
+                      marginRight:scaledHeight(10),
+                      marginLeft: scaledHeight(10),
+                    }}
+                  />
 
                 <Text style={{ width:scaledHeight(150),marginLeft: scaledHeight(10),marginTop:scaledHeight(10),color:StyledConstants.colors.FONT_COLOR,fontSize:scaledHeight(12)}}>
                  {this.state.selectedFileName}

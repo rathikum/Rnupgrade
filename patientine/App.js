@@ -61,49 +61,49 @@ const AppNavigator = createStackNavigator({
     home: {
         screen: HomePage,
         navigationOptions: {
-            header: null,
+           
         }
     },
     Online: {
         screen: OnlinePayment,
         navigationOptions: {
-            header: null,
+           
         }
     },
     OfflineMessage: {
         screen: OfflineMessage,
         navigationOptions: {
-            header: null,
+            
         }
     },
     OfflineDetails: {
         screen: OfflineMessageDetails,
         navigationOptions: {
-            header: null,
+           
         }
     },
     UpComing: {
         screen: UpComingScreen,
         navigationOptions: {
-            header: null,
+           
         }
     },
     Upload: {
         screen: UploadScreen,
         navigationOptions: {
-            header: null,
+           
         }
     },
     VisitNote: {
         screen: VisitNoteScreen,
         navigationOptions: {
-            header: null,
+           
         }
     },
     Profile: {
         screen: ProfileScreen,
         navigationOptions: {
-            header: null,
+           
         }
     }
 },

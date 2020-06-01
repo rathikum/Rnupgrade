@@ -8,7 +8,8 @@ import {
   Dimensions,
   StyleSheet
 } from 'react-native'
-import FontAwesome, { Icons } from 'react-native-fontawesome'
+// import FontAwesome, { Icons } from 'react-native-fontawesome'
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Card } from 'react-native-elements'
 import moment from 'moment'
 import { baseURL } from '../Utils/properties'
@@ -24,7 +25,7 @@ export default class VisitNote extends Component {
       headerTintColor: '#fff',
       title: 'Visits',
       headerStyle: {
-        height: scaledHeight(50),
+        height: scaledHeight(100),
         backgroundColor: StyledConstants.colors.primaryColor
       },
       headerTitleStyle: {
@@ -34,16 +35,12 @@ export default class VisitNote extends Component {
       },
       headerLeft: (
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          {/* <FontAwesome
-            style={{
-              fontSize: scaledHeight(20),
-              color: StyledConstants.colors.WHITE_COLOR,
-              marginRight: scaledHeight(14),
-              marginLeft: scaledHeight(14)
-            }}
-          >
-            {Icons.arrowLeft}
-          </FontAwesome> */}
+          <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={styles.headerArrow}
+                  />
         </TouchableOpacity>
       )
     }
@@ -167,9 +164,11 @@ export default class VisitNote extends Component {
                       navigate('VisitNoteDetails', { visitId: data.visitId })
                     }
                   >
-                    {/* <FontAwesome style={styles.siderIcon}>
-                      {Icons.angleRight}
-                    </FontAwesome> */}
+                     <FontAwesome
+                    size={20}
+                    name="chevron-right"
+                    color={StyledConstants.colors.primaryColor}
+                  />
                   </TouchableOpacity>
                 </View>
               </View>
@@ -211,6 +210,13 @@ const styles = StyleSheet.create({
     marginLeft: '4%',
     marginTop: scaledHeight(20),
     marginBottom: scaledHeight(10)
+  },
+  headerArrow: {
+    fontSize: scaledHeight(20),
+    marginTop: scaledHeight(3),
+    color: StyledConstants.colors.WHITE_COLOR,
+    marginLeft: scaledHeight(20),
+    marginRight: scaledHeight(20),
   },
   cardContentMainView: {
     flexDirection: 'row',

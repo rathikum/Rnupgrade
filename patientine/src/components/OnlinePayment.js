@@ -9,7 +9,7 @@ import {
   StyleSheet,
   Modal,
 } from 'react-native'
-import FontAwesome, { Icons } from 'react-native-fontawesome'
+// import FontAwesome, { Icons } from 'react-native-fontawesome'
 import { Card } from 'react-native-elements'
 import moment from 'moment'
 import {WebView} from 'react-native-webview'
@@ -17,6 +17,7 @@ import { baseURL } from '../Utils/properties'
 import PatientId from './PatientId'
 import { scaledHeight } from '../Utils/Resolution'
 import StyledConstants from '../constants/styleConstants'
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 var patId = new PatientId()
 export default class OnlinePayment extends Component {
@@ -26,7 +27,7 @@ export default class OnlinePayment extends Component {
       headerTintColor: '#fff',
       title: 'Payment Details',
       headerStyle: {
-        height: scaledHeight(50),
+        height: scaledHeight(100),
         backgroundColor: StyledConstants.colors.primaryColor
       },
       headerTitleStyle: {
@@ -36,16 +37,16 @@ export default class OnlinePayment extends Component {
       },
       headerLeft: (
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          {/* <FontAwesome
-            style={{
-              fontSize: 20,
-              color: 'white',
-              marginRight: 14,
-              marginLeft: 15
-            }}
-          >
-            {Icons.arrowLeft}
-          </FontAwesome> */}
+           <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={{fontSize: scaledHeight(20),
+                      marginTop: scaledHeight(3),
+                      color: StyledConstants.colors.WHITE_COLOR,
+                      marginLeft: scaledHeight(20),
+                      marginRight: scaledHeight(20),}}
+                  />
         </TouchableOpacity>
       )
     }
@@ -376,16 +377,16 @@ export default class OnlinePayment extends Component {
               }}
               onPress={() => this.setState({ showModal: false })}
             >
-              {/* <FontAwesome
-                style={{
-                  fontSize: scaledHeight(20),
-                  color: StyledConstants.colors.primaryColor,
-                  marginRight: scaledHeight(14),
-                  marginLeft: scaledHeight(14)
-                }}
-              >
-                {Icons.arrowLeft}
-              </FontAwesome> */}
+              <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={{fontSize: scaledHeight(20),
+                      marginTop: scaledHeight(3),
+                      color: StyledConstants.colors.primaryColor,
+                      marginLeft: scaledHeight(20),
+                      marginRight: scaledHeight(20),}}
+                  />
               <Text
                 style={{
                   fontSize: scaledHeight(20),

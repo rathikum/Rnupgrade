@@ -29,8 +29,9 @@ let noOfDoc = 0;
 var count = 0;
 var notificationsDetailsList = [];
 import { GDropDownComponent} from '../CommonComponents';
-import FontAwesome, { Icons, signOutAlt } from "react-native-fontawesome";
+// import FontAwesome, { Icons, signOutAlt } from "react-native-fontawesome";
 import { scaledHeight } from "../Utils/Resolution";
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export default class Profile extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -39,7 +40,7 @@ export default class Profile extends Component {
       headerTintColor: "#fff",
       title: "Dashboard",
       headerStyle: {
-        height: scaledHeight(50),
+        height: scaledHeight(100),
         backgroundColor:StyledConstants.colors.primaryColor
       },
       headerTitleStyle: {
@@ -60,44 +61,12 @@ export default class Profile extends Component {
                 marginRight: 10
               }}
             >
-              {/* <FontAwesome
-                    style={{
-                      fontSize: 26,
-                      color: "white",
-                      marginRight: 14,
-                      marginLeft: 11,
-                      marginTop: 5
-                    }}
-                  >
-                    {Icons.arrowLeft}
-                  </FontAwesome> */}
-
-              {/* <IconBadge
-                MainElement={
-                  <FontAwesome
-                    style={{
-                      fontSize: 26,
-                      color: "white",
-                      marginRight: 14,
-                      marginLeft: 11,
-                      marginTop: 5
-                    }}
-                  >
-                    {Icons.arrowLeft}
-                  </FontAwesome>
-                }
-                BadgeElement={
-                  <Text style={{ color: "#FFF" }}>
-                    {count <= 9 ? count : "9+"}
-                  </Text>
-                }
-                IconBadgeStyle={{
-                  width: 8,
-                  height: 17,
-                  backgroundColor: "#aedd13"
-                }}
-                Hidden={count == 0}
-              /> */}
+                <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={styles.iconPowerOff}
+                  />
             </View>
           </TouchableOpacity>
         </View>
@@ -418,14 +387,12 @@ export default class Profile extends Component {
                     }
                   }}
                 >
-                  {/* <FontAwesome
-                    style={{
-                      fontSize: scaledHeight(40),
-                      color: StyledConstants.colors.primaryColor
-                    }}
-                  >
-                    {Icons.angleLeft}
-                  </FontAwesome> */}
+                  <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.primaryColor}
+                   
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -494,14 +461,11 @@ export default class Profile extends Component {
                     }
                   }}
                 >
-                  {/* <FontAwesome
-                    style={{
-                      fontSize: scaledHeight(40),
-                      color: StyledConstants.colors.primaryColor
-                    }}
-                  >
-                    {Icons.angleRight}
-                  </FontAwesome> */}
+                  <FontAwesome
+                    size={20}
+                    name="chevron-Right"
+                    color={StyledConstants.colors.primaryColor}
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -1002,3 +966,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   }
 });
+
+Profile.defaultProps = {
+  navigation: {},
+};

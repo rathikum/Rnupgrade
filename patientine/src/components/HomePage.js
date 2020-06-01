@@ -25,7 +25,7 @@ export default class HomePage extends Component {
       headerTintColor: '#fff',
       title: 'Home',
       headerStyle: {
-        height: scaledHeight(50),
+        height: scaledHeight(100),
         backgroundColor: StyledConstants.colors.primaryColor,
       },
       headerTitleStyle: {
@@ -33,13 +33,38 @@ export default class HomePage extends Component {
         fontSize: scaledHeight(20),
         alignSelf: 'center',
       },
+      headerLeft: (
+        <View>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                marginLeft: 10,
+                marginRight: 10
+              }}
+            >
+                <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={styles.iconPowerOff}
+                  />
+            </View>
+          </TouchableOpacity>
+        </View>
+      ),
       headerRight: (
         <View style={{flexDirection: 'row'}}>
           <View>
             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-              {/* <FontAwesome style={styles.iconPowerOff}>
-                {Icons.powerOff}
-              </FontAwesome> */}
+              <FontAwesome
+                    size={20}
+                    name="power-off"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={styles.iconPowerOff}
+                  />
             </TouchableOpacity>
           </View>
         </View>

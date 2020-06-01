@@ -10,7 +10,7 @@ import {
   Platform,
   Linking
 } from 'react-native'
-import FontAwesome, { Icons } from 'react-native-fontawesome'
+// import FontAwesome, { Icons } from 'react-native-fontawesome'
 import {
   Avatar,
   List,
@@ -28,6 +28,7 @@ import { baseURL } from '../Utils/properties'
 import DocumentPicker from 'react-native-document-picker'
 import { scaledHeight } from '../Utils/Resolution'
 import StyledConstants from '../constants/styleConstants'
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 var DetailsOfBilling = []
 var patId = new PatientId()
@@ -51,7 +52,7 @@ export default class UpcomingEvents extends Component {
       headerTintColor: '#fff',
       title: 'Upcoming Events',
       headerStyle: {
-        height: scaledHeight(50),
+        height: scaledHeight(100),
         backgroundColor: StyledConstants.colors.primaryColor
       },
       headerTitleStyle: {
@@ -61,16 +62,16 @@ export default class UpcomingEvents extends Component {
       },
       headerLeft: (
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          {/* <FontAwesome
-            style={{
-              fontSize: scaledHeight(20),
-              color: StyledConstants.colors.WHITE_COLOR,
-              marginRight: scaledHeight(15),
-              marginLeft: scaledHeight(15)
-            }}
-          >
-            {Icons.arrowLeft}
-          </FontAwesome> */}
+         <FontAwesome
+                    size={20}
+                    name="chevron-left"
+                    color={StyledConstants.colors.WHITE_COLOR}
+                    style={{fontSize: scaledHeight(20),
+                      marginTop: scaledHeight(3),
+                      color: StyledConstants.colors.WHITE_COLOR,
+                      marginLeft: scaledHeight(20),
+                      marginRight: scaledHeight(20),}}
+                  />
         </TouchableOpacity>
       )
     }
