@@ -34,6 +34,31 @@ module.exports = StyleSheet.create({
     backgroundColor: StyledConstants.colors.primaryColor,
     borderRadius: 10
   },
+  textin: {
+    flexDirection: "row",
+    marginTop: scaledHeight(10)
+  },
+  textIcon: {
+    marginTop: scaledHeight(20)
+  },
+  textInput:{
+    height: scaledHeight(52),
+    fontSize: scaledHeight(18),
+    color:  StyledConstants.colors.LBL_FIELD_COLOR,
+    // width: "85%",
+    borderBottomWidth: 1,
+    borderBottomColor:  StyledConstants.colors.FONT_COLOR,
+    marginLeft: "4%"
+  },
+  inputTextStyle: {
+    height: scaledHeight(52),
+    fontSize: scaledHeight(18),
+    color:  StyledConstants.colors.LBL_FIELD_COLOR,
+    width: "85%",
+    borderBottomWidth: 1,
+    borderBottomColor:  StyledConstants.colors.FONT_COLOR,
+    marginLeft: "4%",
+  },
   rowgender: {
     marginTop:scaledHeight(30),
     flexDirection: "row"

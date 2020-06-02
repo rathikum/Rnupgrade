@@ -8,8 +8,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import LoginScreen from './src/components/Login/Login';
 // import DashBoardScreen from './src/components/DashBoard';
 import ProfileScreen from './src/components/Profile';
-// import RegistrationScreen from './src/components/Registration';
-// import ForgetPasswordScreen from './src/components/ForgetPassword';
+import RegistrationScreen from './src/components/Registration';
+import ForgetPasswordScreen from './src/components/ForgetPassword';
 // import AppointmentScreen from './src/components/Appointment';
 import VisitNoteScreen from './src/components/VisitNote';
 // import MedicationsScreen from './src/components/Medications';
@@ -22,7 +22,7 @@ import HomePage from './src/components/HomePage';
 import OfflineMessage from './src/components/offlineMessages';
 import OfflineMessageDetails from './src/components/offlineMessageDetails'
 // import AppointmentPay from './src/components/AppoinmentPayment';
-// import TermsCondition from './src/components/TermsandCondition';
+import TermsCondition from './src/components/TermsandCondition';
 
 // const App = createStackNavigator({
 //   Login: {screen: LoginScreen},
@@ -102,6 +102,24 @@ const AppNavigator = createStackNavigator({
     },
     Profile: {
         screen: ProfileScreen,
+        navigationOptions: {
+           
+        }
+    },
+    Registration: {
+        screen: RegistrationScreen,
+        navigationOptions: {
+           
+        }
+    },
+    ForgetPassword: {
+        screen: ForgetPasswordScreen,
+        navigationOptions: {
+           
+        }
+    },
+    TermsCondition: {
+        screen: TermsCondition,
         navigationOptions: {
            
         }
