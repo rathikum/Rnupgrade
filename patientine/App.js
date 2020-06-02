@@ -10,11 +10,11 @@ import LoginScreen from './src/components/Login/Login';
 import ProfileScreen from './src/components/Profile';
 import RegistrationScreen from './src/components/Registration';
 import ForgetPasswordScreen from './src/components/ForgetPassword';
-// import AppointmentScreen from './src/components/Appointment';
+import AppointmentScreen from './src/components/Appointment';
 import VisitNoteScreen from './src/components/VisitNote';
 // import MedicationsScreen from './src/components/Medications';
 // import PaymentScreen from './src/components/Payment';
-// import Notification from './src/components/Notification';
+import Notification from './src/components/Notification';
 import UploadScreen from './src/components/Upload';
 import OnlinePayment from './src/components/OnlinePayment';
 import UpComingScreen from './src/components/UpcomingEvents';
@@ -120,6 +120,18 @@ const AppNavigator = createStackNavigator({
     },
     TermsCondition: {
         screen: TermsCondition,
+        navigationOptions: {
+           
+        }
+    },
+    Appointment: {
+        screen: AppointmentScreen,
+        navigationOptions: {
+           
+        }
+    },
+    Notification: {
+        screen: Notification,
         navigationOptions: {
            
         }

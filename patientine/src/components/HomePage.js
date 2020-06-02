@@ -13,7 +13,7 @@ import IconBadge from 'react-native-icon-badge';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {Icons} from 'react-native-fontawesome';
+// import {Icons} from 'react-native-fontawesome';
 import StyledConstants from '../constants/styleConstants';
 import {scaledHeight} from '../Utils/Resolution';
 var count = 1;
@@ -58,7 +58,7 @@ export default class HomePage extends Component {
       headerRight: (
         <View style={{flexDirection: 'row'}}>
           <View>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+            <TouchableOpacity onPress={() => navigation.navigate('login')}>
               <FontAwesome
                     size={20}
                     name="power-off"
